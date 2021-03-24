@@ -41,3 +41,8 @@
 1. Rendering images from movie props
 2. Rendering title and release date
 3.
+
+### Watchlist component
+
+1. Importing global context state
+2.
