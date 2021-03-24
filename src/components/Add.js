@@ -1,6 +1,7 @@
 
 
 import React,{useState} from 'react';
+import ResultCard from './ResultCard';
 
 
 
@@ -12,12 +13,12 @@ const Add = () => {
     const onChange=e=>{
         e.preventDefault();
         setQuery(e.target.value)
-        // const URL_API="https://api.themoviedb.org/3/search/company?"
-        fetch(`https://api.themoviedb.org/3/search/company?api_key=${process.env.REACT_APP_TMDB_APP}&query=${e.target.value}&page=1`)
+        fetch(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1&include_adult=false&query=${e.target.value}`)
             .then(res=>res.json())
             .then(data=>{
                 if(!data.errors){
                     setResults(data.results)
+                    console.log(data.results);
                 }else{
                     setResults([])
                 }
@@ -38,7 +39,9 @@ const Add = () => {
                     {results.length>0 && (
                         <ul className="results">
                             {results.map(res=>(
-                                <li key={res.id}>{res.name}</li>
+                                <li key={res.id}>
+                                    <ResultCard movie={res}/>
+                                </li>
                             ))}
                         </ul>
                     )}
