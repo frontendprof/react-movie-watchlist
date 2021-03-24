@@ -3,32 +3,38 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import {Header,Add,Watched,Watchlist} from "./components";
 
 
+import {GlobalProvider} from "./context/GlobalState";
+
 import './App.css';
 
 function App() {
   return (
-    <Router>
-      <Header />
+    <GlobalProvider>
 
-      <Switch>
+    
+      <Router>
+        <Header />
 
-
-        <Route exact path="/">
-          <Watchlist />
-        </Route>
-
-        <Route path="/watched">
-          <Watched />
-        </Route>
-
-        <Route path="/add">
-          <Add />
-        </Route>
+        <Switch>
 
 
+          <Route exact path="/">
+            <Watchlist />
+          </Route>
 
-      </Switch>
-    </Router>
+          <Route path="/watched">
+            <Watched />
+          </Route>
+
+          <Route path="/add">
+            <Add />
+          </Route>
+
+
+
+        </Switch>
+      </Router>
+    </GlobalProvider>
   );
 }
 
