@@ -58,3 +58,8 @@
 
 1. Importing useContext hook
 2. Importing GlobalContext to use removemovie event handler
+
+### Watched component
+
+1. Importing useContext hook
+2. Importing GlobalContext to use removemovie event handler
