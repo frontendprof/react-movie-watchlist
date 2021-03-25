@@ -18,6 +18,8 @@
 4. Watched component
 5. Add component
 6. ResultCard component
+7. MovieCard component
+8. MovieControls component
 
 ### App component
 
@@ -46,3 +48,13 @@
 
 1. Importing global context state
 2.
+
+### GlobalState context
+
+1. addMovieToWatchlist
+2. removeMovieFromWatchlist
+
+### MovieControls component
+
+1. Importing useContext hook
+2. Importing GlobalContext to use removemovie event handler

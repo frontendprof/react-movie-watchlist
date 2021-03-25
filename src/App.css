@@ -215,7 +215,7 @@ header .nav-links li:last-child {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
-  min-height: 110vh;
+  min-height: 150vh;
 }
 
 @media (min-width: 992px) {
