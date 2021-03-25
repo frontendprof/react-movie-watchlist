@@ -1,22 +1,14 @@
-
 import React from 'react'
 
-const MovieCard = ({movie,type}) => {
+export const MovieCard = ({movie}) => {
     return (
         <div className="movie-card">
             <div className="overlay">
-
                 {movie.poster_path?(
-                        <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={`${movie.title} Poster`}/>
-                    ):(
-                        <div className="filler-poster">
-
-                        </div>
-                )}
-
+                    <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={movie.title}/>
+                ):"Huh"}
             </div>
+            
         </div>
     )
 }
-
-export default MovieCard
