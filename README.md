@@ -21,6 +21,11 @@
 7. MovieCard component
 8. MovieControls component
 
+### Contexts
+
+1. GlobalState context
+2. AppReducer
+
 ### App component
 
 1. Rendering header component as child component
@@ -53,13 +58,24 @@
 
 1. addMovieToWatchlist
 2. removeMovieFromWatchlist
+3. addMovieToWatched
+4. moveToWatchlist
+5. removeFromWatchlist
 
 ### MovieControls component
 
 1. Importing useContext hook
 2. Importing GlobalContext to use removemovie event handler
+3. Importing addMovieToWatched property and configure
 
 ### Watched component
 
 1. Importing useContext hook
 2. Importing GlobalContext to use removemovie event handler
+
+### AppReducer context
+
+1. Checking action types including default
+2. AddMovieToWatchlist case and config
+3. RemoveMovieFromWatchlist case anc config
+4. addMovieToWatched case

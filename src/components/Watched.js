@@ -21,7 +21,7 @@ const Watched = () => {
                         ))}
                     </div>
                 ):(
-                    <h2 className="no-movies">No movies in your list, add some!</h2>
+                    <h2 className="no-movies">No watched movies here.</h2>
                 )}
                 
             </div>
